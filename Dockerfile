@@ -33,8 +33,8 @@ LABEL io.k8s.description="Platform for building Spring Boot applications with ma
       io.openshift.expose-services="8080:http" \
       io.openshift.tags="builder,maven-3,springboot"
 
-#LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
-COPY ./.s2i/bin/ /usr/libexec/s2i
+LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
+COPY ./.s2i/bin/ /usr/local/sti
 
 RUN chown -R 1001:1001 /opt/openshift
 
