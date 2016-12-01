@@ -14,7 +14,7 @@ ENV MAVEN_VERSION 3.3.9
 #      io.openshift.expose-services="8080:http" \
 #      io.openshift.tags="builder,x.y.z,etc."
 
-RUN yum install java-1.8.0-openjdk && \
+RUN yum install -y java-1.8.0-openjdk && \
     (curl -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
     tar -zx -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
