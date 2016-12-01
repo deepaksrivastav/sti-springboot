@@ -43,7 +43,7 @@
                "dockerStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "centos:centos7"
+                     "name": "centos:7"
                   }
                }
             },
@@ -60,7 +60,10 @@
          "kind": "ImageStream",
          "apiVersion": "v1",
          "metadata": {
-            "name": "centos"
+            "name": "
+            
+            
+            "
          },
          "spec": {
             "dockerImageRepository": "library/centos:centos7"
