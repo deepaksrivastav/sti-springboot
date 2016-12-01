@@ -6,7 +6,7 @@ FROM openshift/base-centos7
 # MAINTAINER Your Name <your@email.com>
 
 # TODO: Rename the builder environment variable to inform users about application you provide them
-ENV MAVEN_VERSION 3.3.3
+ENV MAVEN_VERSION 3.3.9
 
 # TODO: Set labels used in OpenShift to describe the builder image
 #LABEL io.k8s.description="Platform for building xyz" \
@@ -14,10 +14,7 @@ ENV MAVEN_VERSION 3.3.3
 #      io.openshift.expose-services="8080:http" \
 #      io.openshift.tags="builder,x.y.z,etc."
 
-RUN curl -LO 'http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-linux-x64.rpm' \
-    -H 'Cookie: oraclelicense=accept-securebackup-cookie' && \
-    rpm -i jdk-8u66-linux-x64.rpm && \
-    rm jdk-8u66-linux-x64.rpm && \
+RUN yum install java-1.8.0-openjdk \
     (curl -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
     tar -zx -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
