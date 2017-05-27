@@ -63,7 +63,7 @@
             "name": "sti-springboot"
          },
          "spec": {
-            "dockerImageRepository": "library/centos:centos7"
+            "dockerImageRepository": "library/centos:7"
          }
       },
       {
