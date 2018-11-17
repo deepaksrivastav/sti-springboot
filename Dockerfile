@@ -3,10 +3,10 @@
 FROM openshift/base-centos7
 
 # TODO: Put the maintainer name in the image metadata
-# MAINTAINER Your Name <your@email.com>
+MAINTAINER Deepak Srivastav
 
 # TODO: Rename the builder environment variable to inform users about application you provide them
-ENV MAVEN_VERSION 3.5.0
+ENV MAVEN_VERSION 3.6.0
 
 # TODO: Set labels used in OpenShift to describe the builder image
 #LABEL io.k8s.description="Platform for building xyz" \
